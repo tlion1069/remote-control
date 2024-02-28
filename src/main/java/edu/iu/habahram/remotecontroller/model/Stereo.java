@@ -1,28 +1,34 @@
 package edu.iu.habahram.remotecontroller.model;
 
-public class Stereo extends RemoteControl{
-    String stereo = "";
-//Command Pattern not learned yet
-    public Stereo(int numberOfDevices) {
-        super(numberOfDevices);
+public class Stereo {
+    String location = "";
+    int volume;
+    String current;
+
+    public Stereo(String location) {
+        this.location = location;
     }
 
     public String on(){
-        return "on";
+        return location + " is on";
     }
     public String off(){
-        return "off";
+        return location + " is off";
     }
     public String setCD(){
-        return "";
+        current = "cd";
+        return location + " is now playing CD";
     }
     public String setDVD(){
-        return "";
+        current = "dvd";
+        return location + " is now playing dvd";
     }
     public String setRadio(){
-        return "";
+        current = "radio";
+        return location + " is now playing Radio";
     }
     public String setVolume(int volume){
-        return "";
+        this.volume = volume;
+        return location + " volume is set to 8";
     }
 }
